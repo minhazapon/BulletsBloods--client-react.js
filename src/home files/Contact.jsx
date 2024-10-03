@@ -90,31 +90,31 @@ const Contact = () => {
 			    <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3 text-white ">
 				<div className="col-span-full sm:col-span-3">
 					<label htmlFor="firstname" className="text-sm">First name</label>
-					<input name='firstname' id="firstname" type="text" placeholder="First name" className=" p-3 w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" />
+					<input required name='firstname' id="firstname" type="text" placeholder="First name" className=" p-3 w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" />
 				</div>
 				<div className="col-span-full sm:col-span-3">
 					<label htmlFor="lastname" className="text-sm">Last name</label>
-					<input name='lastname' id="lastname" type="text" placeholder="Last name" className=" p-3  w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" />
+					<input required name='lastname' id="lastname" type="text" placeholder="Last name" className=" p-3  w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" />
 				</div>
 				<div className="col-span-full sm:col-span-3">
 					<label htmlFor="email" className="text-sm">Email</label>
-					<input name='email' id="email" type="email" placeholder="Email" className=" p-3 w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" />
+					<input required name='email' id="email" type="email" placeholder="Email" className=" p-3 w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" />
 				</div>
 				<div className="col-span-full">
 					<label htmlFor="address" className="text-sm">Address</label>
-					<input name='address' id="address" type="text" placeholder="Address" className=" p-3 w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" />
+					<input required name='address' id="address" type="text" placeholder="Address" className=" p-3 w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" />
 				</div>
 				<div className="col-span-full sm:col-span-2">
 					<label htmlFor="city" className="text-sm">City</label>
-					<input name='city' id="city" type="text" placeholder="City" className="w-full p-3 rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" />
+					<input required name='city' id="city" type="text" placeholder="City" className="w-full p-3 rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" />
 				</div>
 				<div className="col-span-full sm:col-span-2">
 					<label htmlFor="state" className="text-sm">State / Province</label>
-					<input name='state' id="state" type="text" placeholder=" State / Province" className="w-full p-3 rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" />
+					<input required name='state' id="state" type="text" placeholder=" State / Province" className="w-full p-3 rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" />
 				</div>
 				<div className="col-span-full sm:col-span-2">
 					<label htmlFor="zip" className="text-sm">ZIP / Postal</label>
-					<input name='zip' id="zip" type="text" placeholder="ZIP / Postal" className="w-full p-3 rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" />
+					<input required name='zip' id="zip" type="text" placeholder="ZIP / Postal" className="w-full p-3 rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-50 focus:dark:ring-violet-600 dark:border-gray-300" />
 				</div>
 				<div className="col-span-full sm:col-span-2">
 					 {/* <input  type="submit" value="Submit" /> */}

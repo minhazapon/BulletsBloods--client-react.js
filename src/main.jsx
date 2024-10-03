@@ -10,6 +10,22 @@ import Root from './Root';
 import Home from './Home';
 
 
+
+import {
+  // useQuery,
+  // useMutation,
+  // useQueryClient,
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
+import GunProducts from './products/GunProducts';
+
+
+
+// Create a client
+const queryClient = new QueryClient()
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -19,12 +35,20 @@ const router = createBrowserRouter([
         path: "/",
         element:  <Home></Home>  ,
       },
+      {
+        path: "/gunsProducts",
+        element: <GunProducts></GunProducts>   ,
+      },
     ],
   },
 ]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+
+    <QueryClientProvider client={queryClient}>
+     <RouterProvider router={router} />
+    </QueryClientProvider>
+   
   </StrictMode>,
 )

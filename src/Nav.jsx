@@ -1,14 +1,14 @@
 
 
 import { NavLink } from 'react-router-dom';
-import logo from '../src/image/logo.jpg'
+
 
 const Nav = () => {
 
     const navz = <>
     
        <li className=' text-white font-mono' ><NavLink to='/' >Home</NavLink></li>
-       <li className=' text-white font-mono' ><NavLink to='/product' >Products</NavLink></li>
+       <li className=' text-white font-mono' ><NavLink to='/gunsProducts' >Products</NavLink></li>
        <li className=' text-white font-mono' ><NavLink to='/ex' >Experience</NavLink></li>
     
     

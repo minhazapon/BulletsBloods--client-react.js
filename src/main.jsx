@@ -19,6 +19,7 @@ import {
   QueryClientProvider,
 } from '@tanstack/react-query'
 import GunProducts from './products/GunProducts';
+import GunsIdData from './products/GunsIdData';
 
 
 
@@ -39,6 +40,7 @@ const router = createBrowserRouter([
         path: "/gunsProducts",
         element: <GunProducts></GunProducts>   ,
       },
+    
     ],
   },
 ]);

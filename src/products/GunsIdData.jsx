@@ -1,16 +1,17 @@
+import { useLoaderData } from "react-router-dom";
 
 
 
+const GunsIdData = () => {
 
-const GunPDetails = ({ _id, image, price, title, details }) => {
+    const data = useLoaderData();
 
-
+   const { _id, image, price, title, details } = data
 
     return (
         <div>
-
-        <div className="max-w-xs p-6 rounded-md shadow-md bg-black border-[1px] border-yellow-400 text-gray-50">
-        	<img src={image} alt="" className="object-cover object-center w-full rounded-md h-72 bg-gray-500" />
+             <div className="max-w-xs p-6 rounded-md shadow-md bg-black border-[1px] border-yellow-400 text-gray-50">
+        	<img src={data.image} alt="" className="object-cover object-center w-full rounded-md h-72 bg-gray-500" />
         	<div className="mt-6 mb-2">
         	
         		<h2 className="text-xl font-semibold font-serif tracking-wide">{title} </h2>
@@ -35,7 +36,6 @@ const GunPDetails = ({ _id, image, price, title, details }) => {
               </a>
               
          
-             
              </div>
 
 
@@ -46,5 +46,5 @@ const GunPDetails = ({ _id, image, price, title, details }) => {
         </div>
     );
 };
- 
-export default GunPDetails;
+
+export default GunsIdData;

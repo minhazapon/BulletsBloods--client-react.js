@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 
@@ -19,26 +20,16 @@ const GunPDetails = ({ _id, image, price, title, details }) => {
             <div className=" flex justify-center items-center gap-5">
               
             <div>
-             <a href="#_" class=" mt-5 px-5 py-2.5 relative rounded group overflow-hidden font-medium bg-black border-[1px] border-yellow-300 text-black inline-block">
-             <span class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-yellow-300 group-hover:h-full opacity-90"></span>
-             <span class="relative text-white">Shop</span>
-             </a>
-            </div>
-
-             <div>
-
-          
-
-              <a class=" mt-5 px-5 py-2.5 relative rounded group overflow-hidden font-medium bg-black border-[1px] border-yellow-300 text-black inline-block">
+              <Link to='/buy'>
+              
+              <a href="#_" class=" mt-5 px-5 py-2.5 relative rounded group overflow-hidden font-medium bg-black border-[1px] border-yellow-300 text-black inline-block">
               <span class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-yellow-300 group-hover:h-full opacity-90"></span>
-              <span class="relative text-white">Details</span>
+              <span class="relative text-white">Buy</span>
               </a>
               
-         
-             
-             </div>
-
-
+              </Link>  
+            
+            </div>
             </div>
             
         </div>

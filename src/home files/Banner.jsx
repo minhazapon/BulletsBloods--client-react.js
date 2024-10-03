@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const Banner = () => {
@@ -21,10 +22,14 @@ const Banner = () => {
                <div>
                   <p className=" flex justify-start text-3xl font-thin text-white ">"An armed society is a polite society." - Robert Heinlein</p>
                   <div className=" flex justify-start mt-5">
-                  <a href="#_" class="px-5 py-2.5 relative rounded group overflow-hidden font-medium bg-black border-[1px] border-yellow-300 text-black inline-block">
+
+                    <Link to='/gunsProducts' >
+                    <a href="#_" class="px-5 py-2.5 relative rounded group overflow-hidden font-medium bg-black border-[1px] border-yellow-300 text-black inline-block">
                   <span class="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-yellow-300 group-hover:h-full opacity-90"></span>
-                  <span class="relative text-white">Shop</span>
+                  <span class="relative text-white">Products</span>
                   </a>
+                    </Link>
+                 
                   </div>
                </div>
           </div>

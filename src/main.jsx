@@ -27,6 +27,10 @@ import AddProducts from './add products file/AddProducts';
 import AddForm from './add products file/AddForm';
 import AddItems from './add products file/AddItems';
 import Update from './add products file/Update';
+import Login from './firebase and sign/Login';
+import SignUp from './firebase and sign/SignUp';
+import AuthContext from './firebase and sign/AuthContext';
+import PrivateRoute from './firebase and sign/PrivateRoute';
 
 
 
@@ -45,41 +49,49 @@ const router = createBrowserRouter([
       },
       {
         path: "/gunsProducts",
-        element: <GunProducts></GunProducts>   ,
+        element:  <PrivateRoute><GunProducts></GunProducts></PrivateRoute>   ,
       },
       {
         path: "/buy",
-        element: <Shop></Shop> ,
+        element:  <PrivateRoute><Shop></Shop></PrivateRoute> ,
       },
       { 
         path: "/ap",
-        element:  <AddProducts></AddProducts>  ,
+        element:   <PrivateRoute><AddProducts></AddProducts></PrivateRoute>  ,
       },
       {
         path: "/EX",
-        element:  <Experience></Experience> ,
+        element:   <PrivateRoute><Experience></Experience></PrivateRoute> ,
         loader: () => fetch('http://localhost:5000/gunsData')
       },
       {
         path: "/EX/:id",
-        element:  <AllExDetails></AllExDetails> ,
+        element:   <PrivateRoute><AllExDetails></AllExDetails></PrivateRoute> ,
         loader: ({params}) => fetch(`http://localhost:5000/gunsData/${params.id}`)
       },
       {
         path: "/addForm",
-        element:  <AddForm></AddForm> ,
+        element:   <PrivateRoute><AddForm></AddForm></PrivateRoute> ,
 
       },
       {
         path: "/additems",
-        element:  <AddItems></AddItems> ,
+        element:   <PrivateRoute><AddItems></AddItems></PrivateRoute> ,
 
       },
       {
         path: "/update/:id",
-        element: <Update></Update> ,
+        element:  <PrivateRoute><Update></Update></PrivateRoute> ,
         loader: ({params}) => fetch(`http://localhost:5000/addData/${params.id}`)
 
+      },
+      {
+        path: "login",
+        element: <Login></Login> ,
+      },
+      {
+        path: "signUp",
+        element:  <SignUp></SignUp> ,
       },
     
     ],
@@ -90,7 +102,9 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
 
     <QueryClientProvider client={queryClient}>
-     <RouterProvider router={router} />
+      <AuthContext>
+      <RouterProvider router={router} />
+      </AuthContext>
     </QueryClientProvider>
    
   </StrictMode>,

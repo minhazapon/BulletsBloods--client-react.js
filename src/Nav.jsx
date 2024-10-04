@@ -11,7 +11,7 @@ const Nav = () => {
        <li className=' text-white font-mono' ><NavLink to='/gunsProducts' >Products</NavLink></li>
        <li className=' text-white font-mono' ><NavLink to='/EX' >Experience</NavLink></li>
        <li className=' text-white font-mono' ><NavLink to='/ap' >AddProducts</NavLink></li>
-       <li className=' text-white font-mono' ><NavLink to='/add' >AddItems</NavLink></li>
+       <li className=' text-white font-mono' ><NavLink to='/additems' >AddItems</NavLink></li>
     
     
     

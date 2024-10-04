@@ -25,6 +25,7 @@ import Experience from './experience/Experience';
 import AllExDetails from './experience/AllExDetails';
 import AddProducts from './add products file/AddProducts';
 import AddForm from './add products file/AddForm';
+import AddItems from './add products file/AddItems';
 
 
 
@@ -66,6 +67,11 @@ const router = createBrowserRouter([
       {
         path: "/addForm",
         element:  <AddForm></AddForm> ,
+
+      },
+      {
+        path: "/additems",
+        element: <AddItems></AddItems> ,
 
       },
     

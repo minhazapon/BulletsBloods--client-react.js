@@ -21,6 +21,8 @@ import {
 import GunProducts from './products/GunProducts';
 import GunsIdData from './products/GunsIdData';
 import Shop from './Shop file/Shop';
+import Experience from './experience/Experience';
+import AllExDetails from './experience/AllExDetails';
 
 
 
@@ -44,6 +46,16 @@ const router = createBrowserRouter([
       {
         path: "/buy",
         element: <Shop></Shop> ,
+      },
+      {
+        path: "/EX",
+        element:  <Experience></Experience> ,
+        loader: () => fetch('http://localhost:5000/gunsData')
+      },
+      {
+        path: "/EX/:id",
+        element:  <AllExDetails></AllExDetails> ,
+        loader: ({params}) => fetch(`http://localhost:5000/gunsData/${params.id}`)
       },
     
     ],

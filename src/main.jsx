@@ -26,6 +26,7 @@ import AllExDetails from './experience/AllExDetails';
 import AddProducts from './add products file/AddProducts';
 import AddForm from './add products file/AddForm';
 import AddItems from './add products file/AddItems';
+import Update from './add products file/Update';
 
 
 
@@ -50,7 +51,7 @@ const router = createBrowserRouter([
         path: "/buy",
         element: <Shop></Shop> ,
       },
-      {
+      { 
         path: "/ap",
         element:  <AddProducts></AddProducts>  ,
       },
@@ -71,7 +72,13 @@ const router = createBrowserRouter([
       },
       {
         path: "/additems",
-        element: <AddItems></AddItems> ,
+        element:  <AddItems></AddItems> ,
+
+      },
+      {
+        path: "/update/:id",
+        element: <Update></Update> ,
+        loader: ({params}) => fetch(`http://localhost:5000/addData/${params.id}`)
 
       },
     

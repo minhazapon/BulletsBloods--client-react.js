@@ -77,7 +77,10 @@ const AddDataDetails = ({items}) => {
               <button className="btn bg-black border-[1px] border-yellow-400 font-serif text-white  ">Shop</button>
               </Link>  
               <button onClick={() => handleDelete(items._id)  } className="" ><img className=" h-[30px] " src="https://cdn-icons-png.flaticon.com/128/6096/6096937.png" alt="" /></button>
-              <img className=" h-[30px] " src="https://cdn-icons-png.flaticon.com/128/5334/5334827.png" alt="" />
+              <Link to={`/update/${_id}`} >
+              <button ><img className=" h-[30px] " src="https://cdn-icons-png.flaticon.com/128/5334/5334827.png" alt="" /></button>
+              </Link>
+           
             </div>
           </div>
         </div>

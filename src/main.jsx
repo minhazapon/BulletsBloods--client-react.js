@@ -23,6 +23,8 @@ import GunsIdData from './products/GunsIdData';
 import Shop from './Shop file/Shop';
 import Experience from './experience/Experience';
 import AllExDetails from './experience/AllExDetails';
+import AddProducts from './add products file/AddProducts';
+import AddForm from './add products file/AddForm';
 
 
 
@@ -48,6 +50,10 @@ const router = createBrowserRouter([
         element: <Shop></Shop> ,
       },
       {
+        path: "/ap",
+        element:  <AddProducts></AddProducts>  ,
+      },
+      {
         path: "/EX",
         element:  <Experience></Experience> ,
         loader: () => fetch('http://localhost:5000/gunsData')
@@ -56,6 +62,11 @@ const router = createBrowserRouter([
         path: "/EX/:id",
         element:  <AllExDetails></AllExDetails> ,
         loader: ({params}) => fetch(`http://localhost:5000/gunsData/${params.id}`)
+      },
+      {
+        path: "/addForm",
+        element:  <AddForm></AddForm> ,
+
       },
     
     ],

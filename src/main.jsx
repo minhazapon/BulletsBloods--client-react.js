@@ -62,12 +62,12 @@ const router = createBrowserRouter([
       {
         path: "/EX",
         element:   <PrivateRoute><Experience></Experience></PrivateRoute> ,
-        loader: () => fetch('http://localhost:5000/gunsData')
+        loader: () => fetch('https://bulletsbloods-server-node-js.onrender.com/gunsData')
       },
       {
         path: "/EX/:id",
         element:   <PrivateRoute><AllExDetails></AllExDetails></PrivateRoute> ,
-        loader: ({params}) => fetch(`http://localhost:5000/gunsData/${params.id}`)
+        loader: ({params}) => fetch(`https://bulletsbloods-server-node-js.onrender.com/gunsData/${params.id}`)
       },
       {
         path: "/addForm",
@@ -82,7 +82,7 @@ const router = createBrowserRouter([
       {
         path: "/update/:id",
         element:  <PrivateRoute><Update></Update></PrivateRoute> ,
-        loader: ({params}) => fetch(`http://localhost:5000/addData/${params.id}`)
+        loader: ({params}) => fetch(`https://bulletsbloods-server-node-js.onrender.com/addData/${params.id}`)
 
       },
       {

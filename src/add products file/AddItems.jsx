@@ -9,7 +9,7 @@ const AddItems = () => {
 
     useEffect( () =>{
 
-      fetch('http://localhost:5000/addData')
+      fetch('https://bulletsbloods-server-node-js.onrender.com/addData')
       .then( res => res.json())
       .then(data => setItems(data))
 

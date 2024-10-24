@@ -10,7 +10,7 @@ const Products = () => {
          queryKey: ['query'],
          queryFn: async () =>{
 
-           const res = await fetch('http://localhost:5000/bulletData')
+           const res = await fetch('https://bulletsbloods-server-node-js.onrender.com/bulletData')
            return res.json()
 
          }

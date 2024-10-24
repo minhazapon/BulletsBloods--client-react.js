@@ -27,7 +27,7 @@ const AddDataDetails = ({items}) => {
             if (result.isConfirmed) {
          
               
-               fetch(`http://localhost:5000/addData/${_id}`, {
+               fetch(`https://bulletsbloods-server-node-js.onrender.com/addData/${_id}`, {
 
                  method: 'DELETE',
               

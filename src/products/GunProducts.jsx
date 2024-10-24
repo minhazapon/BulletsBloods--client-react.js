@@ -15,7 +15,7 @@ const GunProducts = () => {
 
     useEffect( () =>{
 
-      fetch('http://localhost:5000/gunsData')
+      fetch('https://bulletsbloods-server-node-js.onrender.com/gunsData')
       .then( res => res.json())
       .then( data => setGuns(data) )
 

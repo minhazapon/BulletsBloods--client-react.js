@@ -21,7 +21,7 @@ const AddForm = () => {
      console.log(addUser)
    
     
-     fetch('http://localhost:5000/addData', {
+     fetch('https://bulletsbloods-server-node-js.onrender.com/addData', {
 
        method: 'POST',
        headers: {

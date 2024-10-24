@@ -11,7 +11,7 @@ const AddData = () => {
         queryKey: ['query'],
         queryFn: async () => {
 
-           const res = await fetch('http://localhost:5000/gunsData')
+           const res = await fetch('https://bulletsbloods-server-node-js.onrender.com/gunsData')
            return res.json()
         }
 

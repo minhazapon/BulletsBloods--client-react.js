@@ -21,7 +21,7 @@ const Transition = () => {
               <div className=" flex justify-center">
                    <div className=" flex justify-center flex-col md:flex-row">
 
-                   <div className="  bg-gradient-to-r from-black p-5   flex items-center gap-5">
+                   <div className="  flex-col md:flex-row lg:flex-row bg-gradient-to-r from-black p-5   flex items-center gap-5">
                       <img className=" h-[80px]" src="https://cdn-icons-png.flaticon.com/128/5322/5322239.png" alt="" />
                       <p className=" text-5xl font-thin  text-yellow-300  ">Why Transition</p>
                       <img className=" h-[80px]" src="https://cdn-icons-png.flaticon.com/128/5322/5322239.png" alt="" />

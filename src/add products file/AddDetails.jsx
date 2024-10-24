@@ -20,7 +20,7 @@ const AddDetails = ({query}) => {
             <p> {details} </p>
             <div className="card-actions justify-end">
                 <Link to='/addForm' >
-                <button className="btn btn-primary">Add Items</button>
+                <button className="btn  bg-black text-white  ">Add Items</button>
                 </Link>
             </div>
           </div>
